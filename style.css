@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Autour+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  user-select: none;
+}
+
+body,html {
+height:100vh;
+}
+.container {
+  width: 100%;
+}
+h1 {
+  height: 100px;
+  padding-top: 20px;
+}
+.cards-container {
+  height: auto;
+  display: grid;
+  width: 100%;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, 350px);
+  place-content: center;
+}
+
+.cards {
+  height: 250px;
+  width: 350px;
+  box-shadow: 10px 10px 20px grey;
+  border-radius: 10px;
+  transition: scale .5s ease;
+  overflow: hidden;
+}
+
+.card-content{
+  font-size: 20px;
+  color: aquamarine;
+}
+.card-title{
+  color: aquamarine;
+  font-size: 15px;
+}
+.front:hover{
+  scale: 1.02;
+  filter: blur(.5px);
+  color: rgb(142, 255, 217);
+}
+.front svg{
+  position: absolute;
+}
+.front {
+  position: relative;
+  color: #ffffff;
+  cursor: pointer;
+  width: 350px;
+  height: 250px;
+  transition: .8s;
+  transform-origin: 0px 0;
+  z-index: 2;
+}
+.front  .img{
+  position: absolute;
+  margin-left: -123px;
+  margin-top: 85px;
+}
+
+.front > code {
+  position: absolute;
+  margin-left: -30px;
+  color: #ffffff98;
+  margin-top: 60px;
+  text-align: left ;
+  font-size: 8px;
+}
+.card-back {
+  z-index: 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: start;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  background-color: aqua;
+  color: black;
+}
+h3 + span {
+  color: white;
+  height: 60px;
+  display: flex;
+  justify-content: end;
+}
+h3 + span a {
+  background-color: rgb(0, 0, 0);
+  width: 40px;
+  font-size: 35px;
+  text-align: center;
+  padding-block: 4px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  height: 50px;
+}
+ .pen{
+  margin-left: -50px;
+  top: 40px;
+}
+.arrow{
+  margin-left: 80px;
+  margin-top: 70px;
+}
+.frame{
+  margin-top: 200px;
+  margin-left: 100px;
+}
+.hand{
+  margin-top: 180px;
+  margin-left: -150px;
+}
+.sketch{
+  margin-top: 10px;
+  margin-left: -160px;
+}
+.web {
+  background-image: url("./card.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+.app {
+  background-image: url("./card.jpg");
+  border-radius: 10px;
+  background-size: cover;
+}
+.py {
+  background-image: url("./card.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+.java {
+  background-image: url("./card.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+.canva {
+  background-image: url("./card.jpg");
+  background-size: cover;
+  border-radius: 10px;
+}
+.front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.cards-inner {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.card-back h3 {
+  font-size: 25px;
+  margin-top: 10px;
+  font-family: "Autour One", cursive;
+}
+.card-back ul {
+  margin-bottom: 20px;
+}
+/* 
+  Disabling input field
+  */
+#cards-web,
+#cards-app,
+#cards-java,
+#cards-py,
+#cards-canva {
+  display: none;
+}
+/* flip effect using check box */
+#cards-web:checked ~ .cards-inner .front,
+#cards-java:checked ~ .cards-inner .front,
+#cards-py:checked ~ .cards-inner .front,
+#cards-canva:checked ~ .cards-inner .front,
+#cards-app:checked ~ .cards-inner .front
+{
+  transform: translateY(-250px);
+}
+
+  
